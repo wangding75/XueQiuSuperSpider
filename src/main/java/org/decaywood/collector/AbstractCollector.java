@@ -28,6 +28,10 @@ public abstract class AbstractCollector<T> extends AbstractRequester implements
      */
     protected abstract T collectLogic() throws Exception;
 
+    protected T collectLogicByPage(int page, int pageNum) throws Exception {
+        return null;
+    }
+
 
     public AbstractCollector(TimeWaitingStrategy strategy) {
         this(strategy, URLMapper.MAIN_PAGE.toString());

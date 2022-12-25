@@ -34,8 +34,8 @@ public class DatabaseAccessor {
 
     public DatabaseAccessor() {
         this(
-                "com.mysql.jdbc.Driver",
-                "jdbc:mysql://localhost:3306/XueQiuSpider",
+                "com.mysql.cj.jdbc.Driver",
+                "jdbc:mysql://localhost:3306/stockspider",
                 "root",
                 "123456"
         );

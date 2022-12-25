@@ -28,7 +28,7 @@ public class MarketQuotationsRankCollector extends AbstractCollector<List<Stock>
     public static final String ORDER_BY_TURNOVER_RATE = "turnover_rate";//按换手排序
 
 
-    public static final int TOPK_MAX_SHRESHOLD = 500;
+    public static final int TOPK_MAX_SHRESHOLD = 30000;
 
 
     /**
@@ -113,6 +113,24 @@ public class MarketQuotationsRankCollector extends AbstractCollector<List<Stock>
     }
 
     @Override
+    public List<Stock> collectLogicByPage(int page, int pageNum) throws Exception {
+        String target = URLMapper.MARKET_QUOTATIONS_RANK_JSON.toString();
+        RequestParaBuilder builder = new RequestParaBuilder(target)
+                .addParameter("stockType", stockType.val)
+                .addParameter("order", asc ? "asc" : "desc")
+                .addParameter("orderBy", orderPattern)
+                .addParameter("size", pageNum)
+                .addParameter("page", page)
+                .addParameter("column", "symbol%2Cname");
+        URL url = new URL(builder.build());
+
+        String json = request(url);
+        System.out.println(url.toString());
+        JsonNode node = mapper.readTree(json);
+        return processNode(node);
+    }
+
+    @Override
     public List<Stock> collectLogic() throws Exception {
         String target = URLMapper.MARKET_QUOTATIONS_RANK_JSON.toString();
         RequestParaBuilder builder = new RequestParaBuilder(target)
@@ -125,6 +143,7 @@ public class MarketQuotationsRankCollector extends AbstractCollector<List<Stock>
         URL url = new URL(builder.build());
 
         String json = request(url);
+        System.out.println(url.toString());
         JsonNode node = mapper.readTree(json);
         return processNode(node);
     }

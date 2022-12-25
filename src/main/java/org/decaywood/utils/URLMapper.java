@@ -27,6 +27,8 @@ public enum URLMapper {
     STOCK_JSON("https://xueqiu.com/v4/stock/quote.json"),
     INDUSTRY_JSON("https://xueqiu.com/service/v5/stock/screener/quote/list"),
 
+    STOCK_LIST("https://stock.xueqiu.com/v5/stock/screener/quote/list.json"),
+
     /*--------------------------------  NetEase     --------------------------------------*/
 
     NETEASE_MAIN_PAGE("https://quotes.money.163.com/stock"),

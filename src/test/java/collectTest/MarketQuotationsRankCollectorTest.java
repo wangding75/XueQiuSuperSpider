@@ -2,11 +2,18 @@ package collectTest;
 
 import org.decaywood.collector.MarketQuotationsRankCollector;
 import org.decaywood.collector.MarketQuotationsRankCollector.StockType;
+import org.decaywood.collector.StockListCollector;
 import org.decaywood.entity.Stock;
+import org.decaywood.entity.enums.MarketType;
+import org.decaywood.utils.DatabaseAccessor;
 import org.junit.Assert;
 import org.junit.Test;
 
+import javax.xml.crypto.Data;
 import java.rmi.RemoteException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 /**
@@ -15,6 +22,72 @@ import java.util.List;
  */
 public class MarketQuotationsRankCollectorTest {
 
+    @Test
+    public void test2k(){
+        System.out.println("CWT INT'L".replace("'", "\'"));
+    }
+    @Test
+    public void testGetAllStock() throws Exception {
+
+        DatabaseAccessor dbAcc = new DatabaseAccessor();
+        Connection connection = dbAcc.getConnection();
+        Statement statement = connection.createStatement();
+        int sum = 0;
+
+        StockListCollector SH_SZ_collector =
+                new StockListCollector(MarketType.US);
+        for (int i = 0; i < 9999; i++) {
+            List<Stock> stocks = SH_SZ_collector.collectLogicByPage(i + 1, 500);
+            if (stocks.size() == 0) break;
+            System.out.println(stocks.size());
+            stocks.forEach(stock -> {
+                String stockNo = stock.getStockNo();
+                String stockName = stock.getStockName();
+                try {
+                    stockName = stockName.replace("'", "\\'");
+                    String s = "insert base_stock values('" + stockNo + "', '" + stockName + "', '" + MarketType.US.getType() +"')";
+                    System.out.println(s);
+                    statement.addBatch(s);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            });
+            statement.executeBatch();
+            sum += stocks.size();
+        }
+
+//        for (int i = 0; i < 9999; i++) {
+//            List<Stock> stocks = SH_B_collector.collectLogicByPage(i + 1, 500);
+//            if (stocks.size() == 0) break;
+//            System.out.println(stocks.size());
+//            sum += stocks.size();
+//        }
+        System.out.println("sum : " + sum);
+        sum = 0;
+//        MarketQuotationsRankCollector SZ_A_collector =
+//                new MarketQuotationsRankCollector(StockType.SZ_A,
+//                        MarketQuotationsRankCollector.ORDER_BY_TURNOVER_RATE,
+//                        500);
+//        for (int i = 0; i < 9999; i++) {
+//            List<Stock> stocks = SZ_A_collector.collectLogicByPage(i + 1, 500);
+//            if (stocks.size() == 0) break;
+//            System.out.println(stocks.size());
+//            sum += stocks.size();
+//        }
+//        System.out.println("sum : " + sum);
+//        sum = 0;
+//        MarketQuotationsRankCollector GROWTH_ENTERPRISE_BOARD_collector =
+//                new MarketQuotationsRankCollector(StockType.GROWTH_ENTERPRISE_BOARD,
+//                        MarketQuotationsRankCollector.ORDER_BY_TURNOVER_RATE,
+//                        500);
+//        for (int i = 0; i < 9999; i++) {
+//            List<Stock> stocks = GROWTH_ENTERPRISE_BOARD_collector.collectLogicByPage(i + 1, 500);
+//            if (stocks.size() == 0) break;
+//            System.out.println(stocks.size());
+//            sum += stocks.size();
+//        }
+//        System.out.println("sum : " + sum);
+    }
 
     @Test(expected = IllegalArgumentException.class)
     public void testNull() {

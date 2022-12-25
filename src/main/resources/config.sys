@@ -3,8 +3,8 @@
 
 ## 并行流底层线程数
 java.util.concurrent.ForkJoinPool.common.parallelism = 4
-cookies = add your own cookie fetched from browser
-## areaCode = 86 可选 默认国内
-## userID = 186xxxxxxxx
-## password = xxxx
-## rememberMe = true 可选 默认开启
+cookies = acw_tc=276077b216719605601702752ece6f689908157497fd29479a2d29d15f0c7a; Hm_lvt_1db88642e346389874251b5a1eded6e3=1671960562; device_id=b9a03ab7ec49712f3b4ce39b5c2272af; s=dj17na8hgs; __utma=1.1418280239.1671960581.1671960581.1671960581.1; __utmc=1; __utmz=1.1671960581.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmt=1; __utmb=1.1.10.1671960581; xq_a_token=c408a64548a15d1677cfb39c028c094b4ecb12b6; xqat=c408a64548a15d1677cfb39c028c094b4ecb12b6; xq_r_token=69e0afa4b6c27f856058c33f90fb3a030539bd20; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOjQ5MDUxMjM2MTIsImlzcyI6InVjIiwiZXhwIjoxNjc0NTQ4MTY4LCJjdG0iOjE2NzE5NjA3NTYzOTksImNpZCI6ImQ5ZDBuNEFadXAifQ.YEP6YUhL9IxgtbVjBSfcwI0gqCsSZZD7eQDfnXMwGY0Yj5ayutCeNHrKae44z6WPHaM4eiz39NS265H0S-JqdnzG1m0kHX7jUK9nYsLHSvwCgcF_-k2D08HPN-YTYorOmiDXbcCRkxQy3Z6nzzURCZAjL87QQa2gCKWN81GB3kCtjueicC908TrmNjeX5Yh_FAD8J3E8fZ8mEdd82ZSvPl8m0M1agSYcBPUla5dlTseSsEiuzTInev5IG5Cyv9Yxfwn-H1tB9fN53sSxTLvswmlc-jK-MLyOi5wjFQmBiEpVR87rfBFK4RSQiJ4dHQFW9hvcmQUxOXTti4CE0rgT-A; xq_is_login=1; u=4905123612; is_overseas=0; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1671960760
+areaCode = 86 可选 默认国内
+userID = 18862006178
+password = 110vey0uwan
+rememberMe = true
