@@ -54,7 +54,7 @@ public class MarketQuotationsRankCollectorTest {
             });
             statement.executeBatch();
             sum += stocks.size();
-        }
+        } 
 
 //        for (int i = 0; i < 9999; i++) {
 //            List<Stock> stocks = SH_B_collector.collectLogicByPage(i + 1, 500);
