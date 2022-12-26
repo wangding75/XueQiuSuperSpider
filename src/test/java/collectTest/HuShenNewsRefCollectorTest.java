@@ -1,11 +1,10 @@
 package collectTest;
 
-import org.decaywood.collector.HuShenNewsRefCollector;
+import org.decaywood.collector.snowball.HuShenNewsRefCollector;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.net.URL;
-import java.rmi.RemoteException;
 import java.util.List;
 
 /**

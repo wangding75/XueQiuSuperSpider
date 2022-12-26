@@ -1,16 +1,14 @@
 package collectTest;
 
-import org.decaywood.collector.MarketQuotationsRankCollector;
-import org.decaywood.collector.MarketQuotationsRankCollector.StockType;
-import org.decaywood.collector.StockListCollector;
+import org.decaywood.collector.snowball.MarketQuotationsRankCollector;
+import org.decaywood.collector.snowball.MarketQuotationsRankCollector.StockType;
+import org.decaywood.collector.snowball.StockListCollector;
 import org.decaywood.entity.Stock;
 import org.decaywood.entity.enums.MarketType;
 import org.decaywood.utils.DatabaseAccessor;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.xml.crypto.Data;
-import java.rmi.RemoteException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -55,38 +53,6 @@ public class MarketQuotationsRankCollectorTest {
             statement.executeBatch();
             sum += stocks.size();
         } 
-
-//        for (int i = 0; i < 9999; i++) {
-//            List<Stock> stocks = SH_B_collector.collectLogicByPage(i + 1, 500);
-//            if (stocks.size() == 0) break;
-//            System.out.println(stocks.size());
-//            sum += stocks.size();
-//        }
-        System.out.println("sum : " + sum);
-        sum = 0;
-//        MarketQuotationsRankCollector SZ_A_collector =
-//                new MarketQuotationsRankCollector(StockType.SZ_A,
-//                        MarketQuotationsRankCollector.ORDER_BY_TURNOVER_RATE,
-//                        500);
-//        for (int i = 0; i < 9999; i++) {
-//            List<Stock> stocks = SZ_A_collector.collectLogicByPage(i + 1, 500);
-//            if (stocks.size() == 0) break;
-//            System.out.println(stocks.size());
-//            sum += stocks.size();
-//        }
-//        System.out.println("sum : " + sum);
-//        sum = 0;
-//        MarketQuotationsRankCollector GROWTH_ENTERPRISE_BOARD_collector =
-//                new MarketQuotationsRankCollector(StockType.GROWTH_ENTERPRISE_BOARD,
-//                        MarketQuotationsRankCollector.ORDER_BY_TURNOVER_RATE,
-//                        500);
-//        for (int i = 0; i < 9999; i++) {
-//            List<Stock> stocks = GROWTH_ENTERPRISE_BOARD_collector.collectLogicByPage(i + 1, 500);
-//            if (stocks.size() == 0) break;
-//            System.out.println(stocks.size());
-//            sum += stocks.size();
-//        }
-//        System.out.println("sum : " + sum);
     }
 
     @Test(expected = IllegalArgumentException.class)

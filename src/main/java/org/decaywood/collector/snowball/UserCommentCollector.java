@@ -1,4 +1,4 @@
-package org.decaywood.collector;
+package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.decaywood.entity.PostInfo;
@@ -10,7 +10,6 @@ import org.springframework.util.StringUtils;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author decaywood

@@ -1,10 +1,9 @@
-package org.decaywood.collector;
+package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.decaywood.entity.Stock;
 import org.decaywood.entity.enums.MarketType;
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
-import org.decaywood.utils.DatabaseAccessor;
 import org.decaywood.utils.RequestParaBuilder;
 import org.decaywood.utils.URLMapper;
 

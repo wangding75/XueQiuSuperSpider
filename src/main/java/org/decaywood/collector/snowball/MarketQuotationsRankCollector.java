@@ -1,4 +1,4 @@
-package org.decaywood.collector;
+package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.decaywood.entity.Stock;
@@ -7,7 +7,6 @@ import org.decaywood.utils.RequestParaBuilder;
 import org.decaywood.utils.URLMapper;
 
 import java.net.URL;
-import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 

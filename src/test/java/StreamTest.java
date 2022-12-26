@@ -1,5 +1,5 @@
 import mapperTest.TestCaseGenerator;
-import org.decaywood.collector.*;
+import org.decaywood.collector.snowball.*;
 import org.decaywood.entity.*;
 import org.decaywood.entity.trend.StockTrend;
 import org.decaywood.filter.PageKeyFilter;
@@ -15,7 +15,6 @@ import org.decaywood.utils.MathUtils;
 import org.junit.Test;
 
 import java.net.URL;
-import java.rmi.RemoteException;
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;

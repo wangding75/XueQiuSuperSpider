@@ -1,11 +1,10 @@
 package collectTest;
 
-import org.decaywood.collector.StockScopeHotRankCollector;
+import org.decaywood.collector.snowball.StockScopeHotRankCollector;
 import org.decaywood.entity.Stock;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.rmi.RemoteException;
 import java.util.List;
 
 /**

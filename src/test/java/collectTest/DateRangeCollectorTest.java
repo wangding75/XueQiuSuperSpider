@@ -1,10 +1,9 @@
 package collectTest;
 
-import org.decaywood.collector.DateRangeCollector;
+import org.decaywood.collector.snowball.DateRangeCollector;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.rmi.RemoteException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;

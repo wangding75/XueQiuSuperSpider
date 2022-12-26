@@ -1,4 +1,4 @@
-package org.decaywood.collector;
+package org.decaywood.collector.snowball;
 
 import org.decaywood.AbstractRequester;
 import org.decaywood.CookieProcessor;

@@ -1,14 +1,11 @@
 package collectTest;
 
-import org.decaywood.collector.StockCommentCollector;
-import org.decaywood.entity.Comment;
+import org.decaywood.collector.snowball.StockCommentCollector;
 import org.decaywood.entity.PostInfo;
-import org.decaywood.mapper.comment.CommentSetMapper;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author decaywood

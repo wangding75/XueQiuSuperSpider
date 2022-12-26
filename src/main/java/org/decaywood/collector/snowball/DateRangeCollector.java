@@ -1,8 +1,7 @@
-package org.decaywood.collector;
+package org.decaywood.collector.snowball;
 
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
 
-import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;

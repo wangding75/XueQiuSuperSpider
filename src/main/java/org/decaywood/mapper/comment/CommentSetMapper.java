@@ -2,19 +2,15 @@ package org.decaywood.mapper.comment;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.NullNode;
-import org.decaywood.collector.StockCommentCollector;
 import org.decaywood.entity.Comment;
-import org.decaywood.entity.PostInfo;
 import org.decaywood.entity.User;
 import org.decaywood.mapper.AbstractMapper;
 import org.decaywood.utils.JsonParser;
 import org.decaywood.utils.RequestParaBuilder;
 import org.decaywood.utils.URLMapper;
-import org.springframework.util.StringUtils;
 
 import java.net.URL;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author decaywood

@@ -1,6 +1,6 @@
 package collectTest;
 
-import org.decaywood.collector.CommissionIndustryCollector;
+import org.decaywood.collector.snowball.CommissionIndustryCollector;
 import org.decaywood.entity.Industry;
 import org.junit.Assert;
 import org.junit.Test;

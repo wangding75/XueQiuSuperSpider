@@ -1,10 +1,9 @@
-package org.decaywood.collector;
+package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.NullNode;
 import org.decaywood.entity.Comment;
 import org.decaywood.entity.User;
-import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
 import org.decaywood.utils.JsonParser;
 import org.decaywood.utils.RequestParaBuilder;
 import org.decaywood.utils.URLMapper;

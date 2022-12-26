@@ -1,11 +1,10 @@
 package collectTest;
 
-import org.decaywood.collector.MostProfitableCubeCollector;
+import org.decaywood.collector.snowball.MostProfitableCubeCollector;
 import org.decaywood.entity.Cube;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.rmi.RemoteException;
 import java.util.List;
 
 /**

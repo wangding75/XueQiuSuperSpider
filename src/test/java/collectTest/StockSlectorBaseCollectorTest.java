@@ -1,6 +1,6 @@
 package collectTest;
 
-import org.decaywood.collector.StockSlectorBaseCollector;
+import org.decaywood.collector.snowball.StockSlectorBaseCollector;
 import org.decaywood.entity.Stock;
 import org.decaywood.entity.selectorQuota.BasicQuota;
 import org.decaywood.entity.selectorQuota.MarketQuotationsQuota;
@@ -8,7 +8,6 @@ import org.decaywood.entity.selectorQuota.XueQiuQuota;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.rmi.RemoteException;
 import java.util.List;
 
 /**

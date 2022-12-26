@@ -1,4 +1,4 @@
-package org.decaywood.collector;
+package org.decaywood.collector.snowball;
 
 import org.decaywood.entity.Industry;
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
@@ -9,7 +9,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.net.URL;
-import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
