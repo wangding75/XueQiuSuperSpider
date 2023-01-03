@@ -1,5 +1,6 @@
 package org.decaywood.collector.snowball;
 
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * 时间范围收集器，获取一段时间的Date
  */
-public class DateRangeCollector extends AbstractCollector <List<Date>> {
+public class DateRangeCollector extends AbstractCollector<List<Date>> {
 
     private final Date from;
     private final Date to;

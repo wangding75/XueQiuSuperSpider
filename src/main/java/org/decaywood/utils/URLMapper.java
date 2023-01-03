@@ -26,8 +26,20 @@ public enum URLMapper {
     STOCK_TREND_JSON("https://xueqiu.com/stock/forchartk/stocklist.json"),
     STOCK_JSON("https://xueqiu.com/v4/stock/quote.json"),
     INDUSTRY_JSON("https://xueqiu.com/service/v5/stock/screener/quote/list"),
-
+    // 股票列表
     STOCK_LIST("https://stock.xueqiu.com/v5/stock/screener/quote/list.json"),
+    // 历史K线
+    STOCK_K_LINE("https://stock.xueqiu.com/v5/stock/chart/kline.json"),
+//    ?
+//    symbol=SZ000428&
+//    begin=1672750107516&
+//    period=day&
+//    type=before&
+//    count=-284&
+//    indicator=
+
+
+    /*--------------------------------  ths     --------------------------------------*/
 
     /*--------------------------------  NetEase     --------------------------------------*/
 

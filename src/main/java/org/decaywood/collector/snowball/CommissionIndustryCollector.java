@@ -1,5 +1,6 @@
 package org.decaywood.collector.snowball;
 
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.entity.Industry;
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
 import org.decaywood.utils.URLMapper;

@@ -1,6 +1,7 @@
 package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.entity.Stock;
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
 import org.decaywood.utils.RequestParaBuilder;

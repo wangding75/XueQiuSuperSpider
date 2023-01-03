@@ -1,6 +1,7 @@
 package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.entity.Cube;
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
 import org.decaywood.utils.RequestParaBuilder;
@@ -18,7 +19,7 @@ import java.util.List;
 /**
  * 雪球最赚钱组合（Cube）收集器
  */
-public class MostProfitableCubeCollector extends  AbstractCollector<List<Cube>> {
+public class MostProfitableCubeCollector extends AbstractCollector<List<Cube>> {
 
     /**
      * 组合所在股市

@@ -1,6 +1,7 @@
 package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.entity.Stock;
 import org.decaywood.entity.enums.MarketType;
 import org.decaywood.timeWaitingStrategy.TimeWaitingStrategy;
@@ -23,6 +24,10 @@ public class StockListCollector extends AbstractCollector<List<Stock>> {
 
 
     private MarketType marketType;
+
+    public MarketType getMarketType() {
+        return marketType;
+    }
 
     public StockListCollector(MarketType marketType) {
         this(null, marketType);
@@ -57,7 +62,7 @@ public class StockListCollector extends AbstractCollector<List<Stock>> {
 
     @Override
     public List<Stock> collectLogic() throws Exception {
-        return null;
+        return collectLogicByPage(1, 500);
     }
 
     private List<Stock> processNode(JsonNode node) {
@@ -69,9 +74,6 @@ public class StockListCollector extends AbstractCollector<List<Stock>> {
         if (stockList == null || stockList.size() == 0) return stocks;
         for (JsonNode jsonNode : stockList) {
             String symbol = jsonNode.get("symbol").asText();
-            if (marketType == MarketType.SH_SZ || marketType == MarketType.KCB) {
-                symbol = symbol.substring(2);
-            }
             String name = jsonNode.get("name").asText();
             Stock stock = new Stock(name, symbol);
             stocks.add(stock);

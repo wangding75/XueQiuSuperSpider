@@ -1,6 +1,7 @@
 package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.entity.PostInfo;
 import org.decaywood.utils.JsonParser;
 import org.decaywood.utils.RequestParaBuilder;

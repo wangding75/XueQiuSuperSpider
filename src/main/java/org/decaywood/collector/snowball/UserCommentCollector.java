@@ -1,6 +1,7 @@
 package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.entity.PostInfo;
 import org.decaywood.utils.JsonParser;
 import org.decaywood.utils.RequestParaBuilder;
@@ -15,7 +16,7 @@ import java.util.List;
  * @author decaywood
  * @date 2020/10/9 12:39
  */
-public class UserCommentCollector extends AbstractCollector<List<PostInfo>>  {
+public class UserCommentCollector extends AbstractCollector<List<PostInfo>> {
 
     private String userId;
 

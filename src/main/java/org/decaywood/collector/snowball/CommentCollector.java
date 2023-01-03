@@ -2,6 +2,7 @@ package org.decaywood.collector.snowball;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.NullNode;
+import org.decaywood.collector.AbstractCollector;
 import org.decaywood.entity.Comment;
 import org.decaywood.entity.User;
 import org.decaywood.utils.JsonParser;
